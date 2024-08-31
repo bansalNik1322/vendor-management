@@ -1,0 +1,438 @@
+{
+	"info": {
+		"_postman_id": "6b851536-a65e-4d8c-afb9-2234984cbd30",
+		"name": "Vendor Management",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21611295"
+	},
+	"item": [
+		{
+			"name": "Vendor",
+			"item": [
+				{
+					"name": "Create Vendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1MTIxNDE0LCJleHAiOjE3MzI4OTc0MTR9.tFMk0-9uIDzfIJfmnXOQ4IfeLJztWklGqRj6eplX7wo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nikhil@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"name\": \"Vendor First\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/vendor/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nikhil@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login-vendor",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login-vendor"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Vendors",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1MTIxNDE0LCJleHAiOjE3MzI4OTc0MTR9.tFMk0-9uIDzfIJfmnXOQ4IfeLJztWklGqRj6eplX7wo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/vendor/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vendor By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/vendor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Vendor",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Nikhil Bansal2\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/vendor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Vendor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1MTIxNDE0LCJleHAiOjE3MzI4OTc0MTR9.tFMk0-9uIDzfIJfmnXOQ4IfeLJztWklGqRj6eplX7wo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/vendor/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Vendor Performance",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1MTIxNDE0LCJleHAiOjE3MzI4OTc0MTR9.tFMk0-9uIDzfIJfmnXOQ4IfeLJztWklGqRj6eplX7wo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/vendor/performance/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"vendor",
+								"performance",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Purchase Order",
+			"item": [
+				{
+					"name": "Create Order",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzI1MTIxNDE0LCJleHAiOjE3MzI4OTc0MTR9.tFMk0-9uIDzfIJfmnXOQ4IfeLJztWklGqRj6eplX7wo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"items\": {\r\n        \"item_1\": {\r\n            \"name\": \"Laptop\",\r\n            \"price\": 1200.00,\r\n            \"quantity\": 2\r\n        },\r\n        \"item_2\": {\r\n            \"name\": \"Wireless Mouse\",\r\n            \"price\": 25.00,\r\n            \"quantity\": 5\r\n        }\r\n    },\r\n    \"quantity\": 10,\r\n    \"vendor\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/purchase-order/create",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Order",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/purchase-order/",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Purchase Order By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/purchase-order/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Purchase Order",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"items\": {\r\n    \"item_1\": {\r\n      \"name\": \"Laptop\",\r\n      \"price\": 1200.00,\r\n      \"quantity\": 2\r\n    },\r\n    \"item_2\": {\r\n      \"name\": \"Wireless Mouse\",\r\n      \"price\": 25.00,\r\n      \"quantity\": 5\r\n    }\r\n  },\r\n  \"quantity\": 10\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/purchase-order/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Purchase Order",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/purchase-order/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Acknowledgement",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "localhost:3000/purchase-order/acknowledgement/1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"purchase-order",
+								"acknowledgement",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nikhil@yopmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"nikhil@yopmail.com\",\r\n    \"password\": \"123456\",\r\n    \"name\": \"Nikhil Bansal\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/auth/register",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
